@@ -15,6 +15,7 @@ export default function Login(req,res){
             
             const token = jwt.sign({
                 id: user.id,
+                name: user.name,
                 email: user.email
             }, 'passwordSecure',{
                 expiresIn: '7d'

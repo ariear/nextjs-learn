@@ -10,6 +10,7 @@
     "knex": "knex"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "bcryptjs": "^2.4.3",
     "jsonwebtoken": "^8.5.1",
     "knex": "^2.1.0",
