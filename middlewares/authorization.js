@@ -10,7 +10,7 @@ export default function authorization(req,res){
     if (tokenType !== 'Bearer') return res.status(401).end()
 
     try {
-        return jwt.verify(tokenValue, 'passwordSecure')
+        return jwt.verify(tokenValue, process.env.SECRET_OR_PUBLIC_KEY)
     } catch (error) {
         return res.status(401).end()
     }

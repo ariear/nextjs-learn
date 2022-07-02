@@ -26,7 +26,7 @@ export default function Register() {
                 setStatus('success')
                 Cookie.set('token', results.data.token)
 
-                Router.push('/posts')
+                Router.replace('/posts')
             }
         }).catch(err => console.log(err) )
     }

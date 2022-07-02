@@ -17,7 +17,7 @@ export default function Login(req,res){
                 id: user.id,
                 name: user.name,
                 email: user.email
-            }, 'passwordSecure',{
+            }, process.env.SECRET_OR_PUBLIC_KEY,{
                 expiresIn: '7d'
             })
 
